@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import work.entity.po.User;
 import work.reposisty.UserMapper;
+import work.service.UseService;
 
 @Service
 public class UserServiceImpl implements UseService{
@@ -16,5 +17,10 @@ public class UserServiceImpl implements UseService{
 
 	public List<User> getAllUser() {
 		return umapeer.selectAll();
+	}
+
+	@Override
+	public User findUser(String userid) {
+		return umapeer.selectByPrimaryKey(userid);
 	}
 }

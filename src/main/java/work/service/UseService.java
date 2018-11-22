@@ -1,4 +1,4 @@
-package work.service.impl;
+package work.service;
 
 import java.util.List;
 
@@ -11,4 +11,6 @@ public interface UseService {
 
 	
 	public List<User> getAllUser();
+	
+	public User findUser(String userid);
 }
