@@ -10,10 +10,9 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class IndexController {
-	@RequestMapping(value="/hi")
+	@RequestMapping(value={"/hi",""})
 	public ModelAndView  hello(){
-		ModelAndView model = new ModelAndView("hello");
-		System.out.println("yes  no ");
+		ModelAndView model = new ModelAndView("/hello");
 		return model;
 	}
 }

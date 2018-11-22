@@ -2,6 +2,9 @@ package work.controller.api;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,7 +27,7 @@ import work.service.UseService;
 @RestController()
 @Api(value="用户接口",tags={"login"})//接口简要标注，对中文的支持不太好
 public class UseLogin {
-
+	
 	@Autowired 
 	private UseService uSerives;
 	
@@ -41,7 +44,16 @@ public class UseLogin {
 	@RequestMapping(value="/checkuser",method=RequestMethod.GET)
 	 public User checkUser(String userid){
 			 return uSerives.findUser(userid);
-		}	 
-		 
-	
+		}
+	 
+	 @RequestMapping(value="/exist")
+	 public void exist(HttpServletRequest request){
+		 HttpSession session = request.getSession();
+		session.removeAttribute("user");
+	 }
+	 @RequestMapping(value="/regist",method=RequestMethod.POST)
+	public User register(User user){
+		 uSerives.save(user);
+		 return user;
+	}
 }

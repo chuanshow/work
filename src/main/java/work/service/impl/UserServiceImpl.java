@@ -23,4 +23,9 @@ public class UserServiceImpl implements UseService{
 	public User findUser(String userid) {
 		return umapeer.selectByPrimaryKey(userid);
 	}
+
+	@Override
+	public Integer save(User user) {
+		return umapeer.insert(user);
+	}
 }

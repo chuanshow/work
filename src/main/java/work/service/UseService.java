@@ -13,4 +13,6 @@ public interface UseService {
 	public List<User> getAllUser();
 	
 	public User findUser(String userid);
+	
+	public Integer save(User user);
 }

@@ -28,6 +28,7 @@ public class MyWebMvcConfigurerAdapter extends WebMvcConfigurerAdapter  {
         //excludePathPatterns 用于排除拦截
         registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/**")
         .excludePathPatterns("/index/login")
+        .excludePathPatterns("/user/login")
         .excludePathPatterns("/static/**")
         .excludePathPatterns("/templates/**");
         super.addInterceptors(registry);

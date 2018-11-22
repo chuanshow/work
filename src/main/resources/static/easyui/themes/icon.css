@@ -1,0 +1,528 @@
+.icon-blank{
+	background:url('icons/blank.gif') no-repeat center center;
+}
+/* 添加  */
+.icon-add{
+	background:url('icons/add.png') no-repeat center center;
+}
+.icon-cz-fangwen{
+	background:url('icons/fangwen.png') no-repeat center center;
+    background-size: 16px;
+}
+/* 审核*/
+.icon-cz-shenhe{
+	background:url('icons/cz_shenhe.png') no-repeat center center;
+}
+
+/* 添加  */
+.icon-u-add{
+	background:url('icons/add.png') no-repeat center center;
+}
+/* 用户添加  */
+.icon-user-add{
+	background:url('icons/users-16px_multiple-19.png') no-repeat center center;
+}
+/* 用户导入  */
+.icon-user-import{
+	background:url('icons/user_import.png') no-repeat center center;
+}
+/* 删除  */
+.icon-u-delete{
+	background:url('icons/ui-16px-1_trash-simple.png') no-repeat center center;
+}
+/* 白色删除  */
+.icon-u-delete-fff{
+	background:url('icons/delete-fff.png') no-repeat center center;
+}
+/*  蓝色查看 */
+.icon-u-zoom{
+	background:url('icons/ui-16px-1_zoom.png') no-repeat center center;
+}
+/*  白色查看 */
+.icon-u-zoom-fff{
+	background:url('icons/u-zoom-fff.png') no-repeat center center;
+}
+/*  灰白查看 */
+.icon-u-zoom2{
+	background:url('icons/ui-16px-2_zoom.png') no-repeat center center;
+}
+.icon-edit{
+	background:url('icons/bianji.png') no-repeat center center;
+}
+.icon-clear{
+	background:url('icons/clear.png') no-repeat center center;
+}
+.icon-remove{
+	background:url('icons/ui-16px-1_trash-simple.png') no-repeat center center;
+}
+.icon-save{
+	background:url('icons/filesave.png') no-repeat center center;
+}
+.icon-cut{
+	background:url('icons/cut.png') no-repeat center center;
+}
+.icon-ok{
+	background:url('icons/ok.png') no-repeat center center;
+}
+.icon-no{
+	background:url('icons/no.png') no-repeat center center;
+}
+/* 删除 */
+.icon-cancel{
+	background:url('icons/cancel.png') no-repeat center center;
+}
+.icon-reload{
+	background:url('icons/reload.png') no-repeat center center;
+}
+.icon-moren{
+	background:url('icons/moren.png') no-repeat center center;
+}
+.icon-search{
+	background:url('icons/ui-16px-2_zoom.png') no-repeat center center;
+}
+.icon-print{
+	background:url('icons/print.png') no-repeat center center;
+}
+.icon-help{
+	background:url('icons/help.png') no-repeat center center;
+}
+.icon-undo{
+	background:url('icons/undo.png') no-repeat center center;
+}
+.icon-redo{
+	background:url('icons/redo.png') no-repeat center center;
+}
+.icon-back{
+	background:url('icons/back.png') no-repeat center center;
+}
+.icon-sum{
+	background:url('icons/sum.png') no-repeat center center;
+}
+.icon-tip{
+	background:url('icons/tip.png') no-repeat center center;
+}
+.icon-filter{
+	background:url('icons/filter.png') no-repeat center center;
+}
+.icon-man{
+	background:url('icons/man.png') no-repeat center center;
+}
+.icon-lock{
+	background:url('icons/lock.png') no-repeat center center;
+}
+
+
+.icon-mini-add{
+	background:url('icons/mini_add.png') no-repeat center center;
+}
+.icon-mini-edit{
+	background:url('icons/mini_edit.png') no-repeat center center;
+}
+.icon-mini-refresh{
+	background:url('icons/mini_refresh.png') no-repeat center center;
+}
+
+.icon-large-picture{
+	background:url('icons/large_picture.png') no-repeat center center;
+}
+.icon-large-clipart{
+	background:url('icons/large_clipart.png') no-repeat center center;
+}
+.icon-large-shapes{
+	background:url('icons/large_shapes.png') no-repeat center center;
+}
+.icon-large-smartart{
+	background:url('icons/large_smartart.png') no-repeat center center;
+}
+.icon-large-chart{
+	background:url('icons/large_chart.png') no-repeat center center;
+}
+
+
+.application_side_tree{
+	background:url('icons/application_side_tree.png') no-repeat center center;
+}
+.computer_error{
+	background:url('icons/computer_error.png') no-repeat center center;
+}
+
+.group{
+	background:url('icons/group.png') no-repeat center center;
+}
+.bug_error{
+	background:url('icons/bug_error.png') no-repeat center center;
+}
+.chart_line{
+	background:url('icons/chart_line.png') no-repeat center center;
+}
+.application_view_columns{
+	background:url('icons/application_view_columns.png') no-repeat center center;
+}
+
+.database{
+	background:url('icons/database.png') no-repeat center center;
+}
+
+.chart_organisation{
+	background:url('icons/chart_organisation.png') no-repeat center center;
+}
+
+.chart_bar{
+	background:url('icons/chart_bar.png') no-repeat center center;
+}
+
+.user{
+	background:url('icons/user.png') no-repeat center center;
+}
+.user_go{
+	background:url('icons/user_go.png') no-repeat center center;
+}
+
+.tag_blue{
+	background:url('icons/tag_blue.png') no-repeat center center;
+}
+
+.key{
+	background:url('icons/key.png') no-repeat center center;
+}
+
+.user_add{
+	background:url('icons/user_add.png') no-repeat center center;
+}
+
+.user_delete{
+	background:url('icons/user_delete.png') no-repeat center center;
+}
+
+.tag_green{
+	background:url('icons/tag_green.png') no-repeat center center;
+}
+.text_padding_top{
+	background:url('icons/text_padding_top.png') no-repeat center center;
+}
+
+.exclamation{
+	background:url('icons/exclamation.png') no-repeat center center;
+}
+
+
+/* logo */
+.yyt-logo{
+	background:url('icons/Logo.png') no-repeat center center;
+}
+/* 科室 */
+.sitemap_color{
+	background:url('icons/sitemap_color.png') no-repeat center center;
+}
+.sitemap{
+	background:url('icons/sitemap.png') no-repeat center center;
+}
+/* 病区 */
+.application_view_tile{
+	background:url('icons/application_view_tile.png') no-repeat center center;
+}
+/* 医院 */
+.building{
+	background:url('icons/building.png') no-repeat center center;
+}
+.building_add{
+	background:url('icons/building_add.png') no-repeat center center;
+}
+.building_delete{
+	background:url('icons/building_delete.png') no-repeat center center;
+}
+/* 科组 */
+.brick{
+	background:url('icons/brick.png') no-repeat center center;
+}
+.brick_add{
+	background:url('icons/brick_add.png') no-repeat center center;
+}
+.brick_delete{
+	background:url('icons/brick_delete.png') no-repeat center center;
+}
+.brick_edit{
+	background:url('icons/brick_edit.png') no-repeat center center;
+}
+
+/* 放大 缩小 */
+.arrow_in{
+	background:url('icons/arrow_in.png') no-repeat center center;
+}
+.arrow_out{
+	background:url('icons/arrow_out.png') no-repeat center center;
+}
+
+/* 主页 */
+.icon-house{
+	background:url('icons/house.png') no-repeat center center;
+}
+
+.folder_user{
+	background:url('icons/folder_user.png') no-repeat center center;
+}
+.status_online{
+	background:url('icons/status_online.png') no-repeat center center;
+}
+
+
+/* 删除  停止 停用 */
+.icon-delete{
+	background:url('icons/delete.png') no-repeat center center;
+}
+
+/* 查看 放大*/
+.icon-magnifier{
+	background:url('icons/ui-16px-1_zoom.png') no-repeat center center;
+}
+
+
+/* 确认 启动*/
+.icon-accept{
+	background:url('icons/accept.png') no-repeat center center;
+}
+
+/* 会话*/
+.icon-comment{
+	background:url('icons/comment.png') no-repeat center center;
+}
+.icon-comment-add{
+	background:url('icons/comment_add.png') no-repeat center center;
+}
+.icon-comment-delete{
+	background:url('icons/comment_delete.png') no-repeat center center;
+}
+.icon-comment-edit{
+	background:url('icons/comment_edit.png') no-repeat center center;
+}
+.icon-comments{
+	background:url('icons/comments.png') no-repeat center center;
+}
+.icon-cosultation-apply{
+	background:url('icons/design-16px_todo.png') no-repeat center center;
+}
+.icon-consultation-case{
+	background:url('icons/files-24px-glyph_single.png') no-repeat center center;
+}
+.icon-consultation-report{
+	background:url('icons/ui-16px-3_chart.png') no-repeat center center;
+}
+.icon-consultation-report-b{
+	background:url('icons/huizhen.png') no-repeat center center;
+}
+.icon-u-ck{
+	background:url('icons/Rectangle_24_Copy.png') no-repeat center center;
+	background-size:40px 40px;
+}
+.datagrid-row-selected .icon-u-ck,
+.icon-u-ck2{
+	background:url('icons/Rectangle_24_Copy_2.png') no-repeat center center;
+	background-size:40px 40px;
+}
+.icon-comments-add{
+	background:url('icons/comments_add.png') no-repeat center center;
+}
+.icon-comments-delete{
+	background:url('icons/comments_delete.png') no-repeat center center;
+}
+
+.icon-chart-organisation-add{
+	background:url('icons/chart_organisation_add.png') no-repeat center center;
+}
+
+/* 发起会诊 */
+.icon-consu-add{
+	background:url('icons/report_add.png') no-repeat center center;
+}
+
+/* 会诊报告 */
+.icon-text-padding-left{
+	background:url('icons/text_padding_left.png') no-repeat center center;
+}
+
+/* 会诊报告 */
+.icon-report{
+	background:url('icons/report.png') no-repeat center center;
+}
+
+/* 会诊审核 */
+.icon-report-go{
+	background:url('icons/report_go.png') no-repeat center center;
+}
+
+/* 会诊申请 */
+.icon-text-signaturet{
+	background:url('icons/text_signature.png') no-repeat center center;
+}
+.icon-text-apply{
+	background:url('icons/text_apply.png') no-repeat center center;
+}
+
+
+/* 会诊病历 */
+.icon-page-attach{
+	background:url('icons/page_attach.png') no-repeat center center;
+}
+
+/* 会诊报告 */
+.icon-page{
+	background:url('icons/page.png') no-repeat center center;
+}
+
+/* 会诊意见 */
+.icon-page-white-text{
+	background:url('icons/page_white_text.png') no-repeat center center;
+}
+
+/* 会诊审核 */
+.icon-page-go{
+	background:url('icons/page_go.png') no-repeat center center;
+}
+
+/* 会诊分发 */
+.icon-page-white-add{
+	background:url('icons/page_white_add.png') no-repeat center center;
+}
+
+/* 绑定 */
+.icon-attach{
+	background:url('icons/bangding.png') no-repeat center center;
+}
+
+/* 表情 */
+.icon-emoticon{
+	background:url('icons/emoticon_smile.png') no-repeat center center;
+}
+/* 图片 */
+.icon-picture{
+	background:url('icons/picture.png') no-repeat center center;
+}
+/* 暂停 */
+.icon-stop{
+	background:url('icons/stop.png') no-repeat center center;
+}
+/* 修改 */
+.icon-cog-edit{
+	background:url('icons/cog_edit.png') no-repeat center center;
+}
+/* 表格 */
+.icon-table{
+	background:url('icons/table.png') no-repeat center center;
+}
+.icon-application-side-list{
+	background:url('icons/application_side_list.png') no-repeat center center;
+}
+.icon-chart-bar{
+	background:url('icons/chart_bar.png') no-repeat center center;
+}
+.icon-images{
+	background:url('icons/images.png') no-repeat center center;
+}
+
+.icon-folder-image{
+	background:url('icons/folder_image.png') no-repeat center center;
+}
+/*切换*/
+.icon-arrow-switch{
+	background:url('icons/arrow_switch.png') no-repeat center center;
+}
+/* 语音 */
+.chat-talk-voice{
+	background:url('icons/ic_voice_hover.png') no-repeat center center;
+}
+/* 图片 */
+.chat-talk-photo{
+	background:url('icons/chat_more_icons_photo.png') no-repeat center center;
+}
+/* 语音通话 */
+.chat-talk-audio{
+	background:url('icons/chat_more_icons_audio.png') no-repeat center center;
+}
+/* 拍照 */
+.chat-talk-camera{
+	background:url('icons/chat_more_icons_camera.png') no-repeat center center;
+}
+/* 视屏通话 */
+.chat-talk-video{
+	background:url('icons/chat_more_icons_video.png') no-repeat center center;
+}
+
+.icon-cz-tijiao{
+	background:url('../img/cz_tijiao.png') no-repeat center center;
+    /* background-size: 100% 100%; */
+    background-size: 19px;
+}
+.icon-cz-chakan{
+	background:url('../img/cz_chakan.png') no-repeat center center;
+    /* background-size: 100% 100%; */
+    background-size: 19px;
+}
+.icon-cz-delete{
+	background:url('../img/cz_delete.png') no-repeat center center;
+    /* background-size: 100% 100%; */
+    background-size: 19px;
+}
+.icon-cz-mingxi{
+	background:url('../img/cz_mingxi.png') no-repeat center center;
+    /* background-size: 100% 100%; */
+    background-size: 19px;
+}
+.icon-cz-bianji{
+	background:url('../img/cz_bianji.png') no-repeat center center;
+    /* background-size: 100% 100%; */
+    background-size: 19px;
+}
+.icon-cz-talk{
+	background:url('../img/cz_huihua.png') no-repeat center center;
+    /* background-size: 100% 100%; */
+    background-size: 19px;
+}
+.icon-cz-renling{
+	background:url('../img/cz_renling.png') no-repeat center center;
+    /* background-size: 100% 100%; */
+    background-size: 19px;
+}
+.icon-cz-hzlc{
+	background:url('../img/cz_hzlc.png') no-repeat center center;
+    /* background-size: 100% 100%; */
+    background-size: 19px;
+	
+}
+.icon-cz-moren{
+	background:url('../img/cz_moren.png') no-repeat center center;
+    /* background-size: 100% 100%; */
+    background-size: 19px;
+	
+}
+.icon-cz-reload-apply{
+	background:url('../img/cz_reload_apply.png') no-repeat center center;
+    /* background-size: 100% 100%; */
+    background-size: 19px;
+	
+}
+.icon-cz-switcher-on{
+	background:url('../img/switcher_on.png') no-repeat center center;
+    /* background-size: 100% 100%; */
+    background-size: 16px 13px;
+	
+}
+.icon-cz-switcher-off{
+	background:url('../img/switcher_off.png') no-repeat center center;
+    /* background-size: 100% 100%; */
+    background-size: 16px 13px;
+	
+}
+
+.icon-groupQuit{
+	background:url('../img/groupQuit.png') no-repeat center center;
+    /* background-size: 100% 100%; */
+    background-size: 16px 13px;
+	
+}
+
+.icon-merge{
+	background:url('../img/merge.png') no-repeat center center;
+    /* background-size: 100% 100%; */
+    background-size: 16px 13px;
+	
+}
