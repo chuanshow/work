@@ -13,6 +13,7 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import work.config.definition.UserInfo;
 import work.controller.web.LoginController;
 import work.entity.po.User;
 import work.service.UserService;
@@ -30,7 +31,8 @@ public class UseLogin {
 	private UserService uSerives;
 	
 	@RequestMapping(value={"/user/getall"})
-	public List<User> getAll(){
+	public List<User> getAll(@UserInfo String username){
+		System.err.println("注解活的结果="+username);
 		return uSerives.getAllUser();
 	}
 

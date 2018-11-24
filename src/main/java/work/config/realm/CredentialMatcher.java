@@ -6,7 +6,7 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.authc.credential.SimpleCredentialsMatcher;
 /**
  * 密码校验方法继承SimpleCredentialsMatcher或HashedCredentialsMatcher类，自定义实现doCredentialsMatch方法
-*
+*直接使用的 HashedCredentialsMatcher  该类没有自定义使用
  */
 public class CredentialMatcher extends SimpleCredentialsMatcher{
 	

@@ -74,6 +74,10 @@ public class ShiroConfiguration {
 	        return new CredentialMatcher();
 	    }
 	    
+	    @Bean("MyHandlerMethodArgumentResolver")
+	    public MyHandlerMethodArgumentResolver creatResolver() {
+	        return new MyHandlerMethodArgumentResolver();
+	    }
 	    @Bean
 	    public HashedCredentialsMatcher hashedCredentialsMatcher() {
 	        HashedCredentialsMatcher hashedCredentialsMatcher = new HashedCredentialsMatcher();

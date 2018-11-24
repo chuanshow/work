@@ -1,10 +1,19 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-	登陆成功
-</body>
-</html>
+<table class="easyui-datagrid" 
+					style="width:100%;height:100%"
+				    id="futaskList" 
+				    data-options="
+				    toolbar:'#kt-nav',
+				    url:'${domain!}api/user/getall',
+				    method:'get',
+				    fitColumns: true,
+				    
+				    "
+			>
+				<thead >
+		            <tr>
+		            	<th data-options="field:'userid',hidden:true">用户id</th>
+		                <th data-options="field:'username',width:80",halign:'center'>用户名称</th>
+		            </tr>
+		        </thead>
+	        </table>
+		
