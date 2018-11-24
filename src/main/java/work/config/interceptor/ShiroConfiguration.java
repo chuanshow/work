@@ -26,17 +26,17 @@ public class ShiroConfiguration {
 	        bean.setSecurityManager((org.apache.shiro.mgt.SecurityManager) manager);
 	 
 	        bean.setLoginUrl("/index/login");//提供登录到url
-	        bean.setSuccessUrl("/hi");//提供登陆成功的url
+	        bean.setSuccessUrl("/web/hi");//提供登陆成功的url
 	       
 	        /*
 	         * 可以看DefaultFilter,这是一个枚举类，定义了很多的拦截器authc,anon等分别有对应的拦截器
 	         * */
 	        LinkedHashMap<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
+	        filterChainDefinitionMap.put("/web/**", "authc");
+	        filterChainDefinitionMap.put("/api/**", "authc");
 	        filterChainDefinitionMap.put("/user/login/*", "anon");//代表着前面的url路径，用后面指定的拦截器进行拦截
-	        filterChainDefinitionMap.put("/api", "authc");
 	        filterChainDefinitionMap.put("/static/**", "anon");
 	        filterChainDefinitionMap.put("/templates/**", "anon");//
-	        filterChainDefinitionMap.put("/web/**", "authc");
 	        bean.setFilterChainDefinitionMap(filterChainDefinitionMap);//设置一个拦截器链
 	 
 	        return bean;

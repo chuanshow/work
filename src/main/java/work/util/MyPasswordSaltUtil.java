@@ -1,5 +1,6 @@
 package work.util;
 
+import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.crypto.hash.SimpleHash;
 
 public class MyPasswordSaltUtil {
