@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import work.entity.po.User;
 
 @Service
-public interface UseService {
+public interface UserService {
 
 	
 	public List<User> getAllUser();
@@ -15,4 +15,6 @@ public interface UseService {
 	public User findUser(String userid);
 	
 	public Integer save(User user);
+	
+	public User findUserByName(String uname);
 }

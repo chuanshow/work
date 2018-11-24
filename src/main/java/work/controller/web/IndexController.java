@@ -9,8 +9,9 @@ import org.springframework.web.servlet.ModelAndView;
  *
  */
 @Controller
+@RequestMapping("/web")
 public class IndexController {
-	@RequestMapping(value={"/hi",""})
+	@RequestMapping(value={"/hi"})
 	public ModelAndView  hello(){
 		ModelAndView model = new ModelAndView("/hello");
 		return model;

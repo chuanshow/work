@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
  *
  */
 @RestController
+@RequestMapping("/web")
 public class ErrorWeb {
 
 	@RequestMapping("/404")

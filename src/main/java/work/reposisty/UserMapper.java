@@ -37,4 +37,7 @@ public interface UserMapper {
 	 * @mbg.generated  Thu Nov 22 16:18:47 CST 2018
 	 */
 	int updateByPrimaryKey(User record);
+	
+	
+	User findUserByName(String uname);
 }

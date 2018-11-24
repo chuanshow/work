@@ -4,18 +4,18 @@
 	<meta charset="UTF-8">
 	<title>首页</title>
 	
-	<link href="${domain!}static/easyui/pages/css/base.css" rel="stylesheet">
-	<link href="${domain!}static/easyui/pages/css/platform.css" rel="stylesheet">
-	<link href="${domain!}static/easyui/custom/uimaker/easyui.css" rel="stylesheet" rel="stylesheet">
-	<link href="${domain!}static/easyui/easyui.css" rel="stylesheet">   
-	<link href="${domain!}static/easyui/themes/icon.css" rel="stylesheet">   
+	<link href="${domain!}easyui/pages/css/base.css" rel="stylesheet">
+	<link href="${domain!}easyui/pages/css/platform.css" rel="stylesheet">
+	<link href="${domain!}easyui/custom/uimaker/easyui.css" rel="stylesheet" rel="stylesheet">
+	<link href="${domain!}easyui/easyui.css" rel="stylesheet">   
+	<link href="${domain!}easyui/themes/icon.css" rel="stylesheet">   
 	
-	<script type="text/javascript" src="${domain!}static/easyui/jquery.min.js"></script>   
-	<script type="text/javascript" src="${domain!}static/easyui/jquery.easyui.min.js"></script>
-	<script type="text/javascript" src="${domain!}static/easyui/datagrid-detailview.js"></script>
-	<script type="text/javascript" src="${domain!}static/easyui/tools.js"></script>
-	<script type="text/javascript" src="${domain!}static/easyui/locale/easyui-lang-zh_CN.js"></script>
-	<script type="text/javascript" src="${domain!}static/easyui/app.js"></script>
+	<script type="text/javascript" src="${domain!}easyui/jquery.min.js"></script>   
+	<script type="text/javascript" src="${domain!}easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="${domain!}easyui/datagrid-detailview.js"></script>
+	<script type="text/javascript" src="${domain!}easyui/tools.js"></script>
+	<script type="text/javascript" src="${domain!}easyui/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="${domain!}easyui/app.js"></script>
 
 </head>
 <body >

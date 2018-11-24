@@ -2,9 +2,6 @@ package work.controller.api;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,20 +15,21 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import work.controller.web.LoginController;
 import work.entity.po.User;
-import work.service.UseService;
+import work.service.UserService;
 /**
  * 
  * @author chuan
  *
  */
 @RestController()
+@RequestMapping("/api")
 @Api(value="用户接口",tags={"login"})//接口简要标注，对中文的支持不太好
 public class UseLogin {
 	
 	@Autowired 
-	private UseService uSerives;
+	private UserService uSerives;
 	
-	@RequestMapping(value={"/user/getall",""})
+	@RequestMapping(value={"/user/getall"})
 	public List<User> getAll(){
 		return uSerives.getAllUser();
 	}
@@ -46,14 +44,4 @@ public class UseLogin {
 			 return uSerives.findUser(userid);
 		}
 	 
-	 @RequestMapping(value="/exist")
-	 public void exist(HttpServletRequest request){
-		 HttpSession session = request.getSession();
-		session.removeAttribute("user");
-	 }
-	 @RequestMapping(value="/regist",method=RequestMethod.POST)
-	public User register(User user){
-		 uSerives.save(user);
-		 return user;
-	}
 }

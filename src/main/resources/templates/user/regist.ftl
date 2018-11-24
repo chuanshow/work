@@ -1,7 +1,7 @@
 <#include "../head.ftl">
 	
 	<div id="body" style="left:500px;width:70%;top:400px">
-			<form class="change-form" action="${domain!}user/login" method="post" style="width:100%;margin:0 auto;" id="usertable" >
+			<form class="change-form" action="${domain!}regist" method="POST" style="width:100%;margin:0 auto;" id="usertable" >
 				<div class="tg-row">
          			<div class="tg-col-12">
 
@@ -42,6 +42,6 @@
 				form.submit();				   		
 				   	}
 				   	<#if msg??>
-				   	$.messager.alert("提示消息",'${msg!}');
+				   	$.messager.show(${msg!});
 				   	</#if>
 				   </script>
