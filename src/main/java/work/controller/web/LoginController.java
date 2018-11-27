@@ -40,7 +40,7 @@ public class LoginController {
 	            subject.login(token);//登陆成功的话，放到session中
 	            User user = (User) subject.getPrincipal();
 	            session.setAttribute("user", user);
-	            model.setViewName("/hello");
+	            model.setViewName("/index");
 	            model.addObject("msg","登录成功");
 	            return model;
 	        } catch (Exception e) {

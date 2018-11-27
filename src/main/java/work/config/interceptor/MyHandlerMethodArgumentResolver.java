@@ -17,9 +17,13 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 import work.config.definition.UserInfo;
 import work.entity.po.User;
 
-
+/**
+ * 自定义解析工具
+ * @author chuan
+ *
+ */
 public class MyHandlerMethodArgumentResolver implements HandlerMethodArgumentResolver  {
-
+	
 	@Override
 	public boolean supportsParameter(MethodParameter parameter) {
 		UserInfo user = parameter.getParameter().getAnnotation(UserInfo.class);
