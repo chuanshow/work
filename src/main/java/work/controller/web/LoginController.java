@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import work.config.definition.UserInfo;
 import work.entity.po.User;
 import work.service.UserService;
 
@@ -26,9 +27,18 @@ public class LoginController {
 	private UserService uSerives;
 	
 	@RequestMapping(value={"/index/login",""})
-	public ModelAndView Login(){
-		ModelAndView model = new ModelAndView("/user/loginpage");
-		return model;
+	public ModelAndView Login(@UserInfo String username,@UserInfo String password){
+		 ModelAndView model =new ModelAndView(); 
+		UsernamePasswordToken token = new UsernamePasswordToken(username, password);
+		  Subject subject =SecurityUtils.getSubject();
+		  try {
+	            subject.login(token);//登陆成功的话，放到session中
+	            model.setViewName("/index");
+	            return model;
+	        } catch (Exception e) {
+	        	model.setViewName("/user/loginpage");
+	            return model;
+	        }
 		
 	}
 	 @RequestMapping(value={"/user/login"})

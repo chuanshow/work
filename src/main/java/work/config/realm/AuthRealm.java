@@ -68,6 +68,8 @@ public class AuthRealm extends AuthorizingRealm{ //AuthenticatingRealm是抽象�
 		UsernamePasswordToken  userpasswordToken = (UsernamePasswordToken) token;//这边是界面的登陆数据，将数据封装成token
 		String username = userpasswordToken.getUsername();
 		User user = userService.findUserByName(username);
+		if(user ==null)
+			return null;
 		return new SimpleAuthenticationInfo(user,user.getPassword(),this.getClass().getName());
 	}
  

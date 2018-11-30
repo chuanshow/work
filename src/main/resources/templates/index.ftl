@@ -4,8 +4,8 @@
 <div class="col-md-8">
 <div class="panel panel-default">  
   <div class="panel-body"> 
-  <table class="table">  
-      <caption>介绍</caption>  
+ <table class="table">  
+      <caption>mock</caption>  
       <thead>  
         <tr>  
           <th>#</th>  
@@ -34,7 +34,7 @@
           <td>@twitter</td>  
         </tr>  
       </tbody>  
-    </table>  
+    </table> 
  
   </div>  
 </div>  
