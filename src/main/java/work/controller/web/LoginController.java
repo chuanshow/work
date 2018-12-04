@@ -1,7 +1,6 @@
 package work.controller.web;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -29,12 +28,15 @@ public class LoginController {
 	@RequestMapping(value={"/index/login",""})
 	public ModelAndView Login(@UserInfo String username,@UserInfo String password){
 		 ModelAndView model =new ModelAndView(); 
-		UsernamePasswordToken token = new UsernamePasswordToken(username, password);
 		  Subject subject =SecurityUtils.getSubject();
 		  try {
-	            subject.login(token);//登陆成功的话，放到session中
+			  if(subject.isAuthenticated()){
 	            model.setViewName("/index");
 	            return model;
+			  }else{
+				  model.setViewName("/user/loginpage");
+		            return model; 
+			  }
 	        } catch (Exception e) {
 	        	model.setViewName("/user/loginpage");
 	            return model;
@@ -42,14 +44,12 @@ public class LoginController {
 		
 	}
 	 @RequestMapping(value={"/user/login"})
-	 public ModelAndView login(HttpServletRequest request,String upassword,String uname, HttpSession session){
+	 public ModelAndView login(HttpServletRequest request,String upassword,String uname){
 		 ModelAndView model =new ModelAndView();
 		 UsernamePasswordToken token = new UsernamePasswordToken(uname, upassword);
 	        Subject subject = SecurityUtils.getSubject();
 	        try {
 	            subject.login(token);//登陆成功的话，放到session中
-	            User user = (User) subject.getPrincipal();
-	            session.setAttribute("user", user);
 	            model.setViewName("/index");
 	            model.addObject("msg","登录成功");
 	            return model;
@@ -60,10 +60,10 @@ public class LoginController {
 	        }
 	 }
 	 @RequestMapping(value="/exist")
-	 public ModelAndView exist(HttpServletRequest request){
-		 ModelAndView model=new ModelAndView("/user/loginpage");
-		 HttpSession session = request.getSession();
-		session.removeAttribute("user");
+	 public ModelAndView exist(){
+		 ModelAndView model =new ModelAndView("/user/loginpage");
+		 Subject subject = SecurityUtils.getSubject();
+		 subject.logout();
 		return model;
 	 }
 	 @RequestMapping(value="/regist",method=RequestMethod.POST)

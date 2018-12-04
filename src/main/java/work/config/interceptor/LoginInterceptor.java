@@ -25,7 +25,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 
 	    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 	            ModelAndView modelAndView) throws Exception {
-
+		//可以进行值域初始化绑定
 	    }
 
 	    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)

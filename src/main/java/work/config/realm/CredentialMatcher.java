@@ -4,6 +4,8 @@ import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.authc.credential.SimpleCredentialsMatcher;
+
+import work.util.MyPasswordSaltUtil;
 /**
  * 密码校验方法继承SimpleCredentialsMatcher或HashedCredentialsMatcher类，自定义实现doCredentialsMatch方法
 *直接使用的 HashedCredentialsMatcher  该类没有自定义使用
@@ -20,7 +22,8 @@ public class CredentialMatcher extends SimpleCredentialsMatcher{
     public boolean doCredentialsMatch(AuthenticationToken token, AuthenticationInfo info) {
         UsernamePasswordToken usernamePasswordToken = (UsernamePasswordToken) token;
         String password = new String(usernamePasswordToken.getPassword());
+    	String saltpassword =MyPasswordSaltUtil.encryptPassword("MD5", password);
         String dbPassword = (String) info.getCredentials();//数据库里的密码
-        return this.equals(password, dbPassword);
+        return this.equals(saltpassword, dbPassword);
     }
 }
