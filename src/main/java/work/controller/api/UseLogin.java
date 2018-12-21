@@ -4,8 +4,6 @@ import java.util.List;
 
 import org.apache.shiro.authz.annotation.RequiresGuest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +16,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import work.config.definition.UserInfo;
-import work.config.interceptor.WxMappingJackson2HttpMessageConverter;
+import work.consul.register.interfance.RegistryService;
 import work.controller.web.LoginController;
 import work.entity.po.User;
 import work.service.UserService;
@@ -35,7 +33,9 @@ public class UseLogin {
 	@Autowired 
 	private UserService uSerives;
 	@Autowired
-    private DiscoveryClient discoveryClient;
+	private RegistryService service;
+	@Autowired
+	private RestTemplate temp;
 	
 	@RequestMapping(value={"/user/getall"})
 	public List<User> getAll(@UserInfo String username){
@@ -58,12 +58,9 @@ public class UseLogin {
 	 }
 	 @RequestMapping(value="/consulservice")
 		public List<String> getService(String url){
-		List<ServiceInstance> ss = discoveryClient.getInstances("myservice");
-		RestTemplate temp = new RestTemplate();
-		temp.getMessageConverters().add(new WxMappingJackson2HttpMessageConverter());
-		Object client = temp.getForObject(ss.get(0).getUri().toString()+"/open/test",String.class);
+		String client = temp.getForObject(service.GetRegisterService().getUri().toString()+"/open/test",String.class);
 		System.err.println(client);
-		return discoveryClient.getServices();
+		return null;
 		}
 	 
 }

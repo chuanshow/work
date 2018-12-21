@@ -6,11 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 
 import com.alibaba.druid.support.http.StatViewServlet;
 
 import work.config.interceptor.MyHandlerMethodArgumentResolver;
+import work.config.interceptor.WxMappingJackson2HttpMessageConverter;
 @Configuration
 public class WebMvcConfig implements org.springframework.web.servlet.config.annotation.WebMvcConfigurer{
 	@Autowired
@@ -44,5 +46,14 @@ public class WebMvcConfig implements org.springframework.web.servlet.config.anno
        servletRegistrationBean.addInitParameter("resetEnable","false");
        return servletRegistrationBean;
     }
-	
+    /**
+     *初始化以及对rest数据类型支持
+     * @return
+     */
+    @Bean
+	public RestTemplate ExecueRestTemplate(){
+		RestTemplate temp = new RestTemplate();
+		temp.getMessageConverters().add(new WxMappingJackson2HttpMessageConverter());
+		return temp;
+	}
 }
