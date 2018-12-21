@@ -5,37 +5,31 @@
 <div class="jumbotron text-center" style="margin-bottom:0">
 </div>
   -->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a style="" class="navbar-brand" href="#">问卷管理系统</a>
+        <a class="navbar-brand" href="#">系统首页</a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-     	<#-- 
-       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">主页</a></li>
-        <li><a href="#">页面 2</a></li>
-        <li><a href="#">页面 3</a></li>
-      </ul>
-       -->
+    <div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">iOS</a></li>
+            <li><a href="#">SVN</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Java
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">jmeter</a></li>
+                    <li><a href="#">EJB</a></li>
+                    <li><a href="#">Jasper Report</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">分离的链接</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">另一个分离的链接</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>vv
     </div>
-  </div>
 </nav>
-<ul class="nav nav-pills nav-stacked">
-<li>
-<div class="panel panel-default">
-    <div class="panel-body">
-     <a href="${domain}web/hi">主页</a>
-    </div>
-</div>
- </li>
-  <li><a href="#">iOS</a></li>
-  <li><a href="#">VB.Net</a></li>
-  <li><a href="#">Java</a></li>
-  <li><a href="#">PHP</a></li>
-</ul>

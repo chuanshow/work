@@ -67,7 +67,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <!--新增所需依赖 -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -107,19 +106,18 @@
             <artifactId>springfox-staticdocs</artifactId>
             <version>2.6.1</version>
         </dependency>
-        
+     <dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+    <version>2.0.0.RELEASE</version>
+	</dependency>
 	</dependencies>
-    
   <build>
     <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-        <plugin>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-maven-plugin</artifactId>
-	</plugin>
         </plugins>
     <finalName>work</finalName>
   </build>

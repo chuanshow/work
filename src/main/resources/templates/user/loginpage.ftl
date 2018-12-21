@@ -3,7 +3,7 @@
 <div class="col-md-8">
 <div class="panel panel-default">  
   <div class="panel-body"> 
- <form role="form" action="user/login" method="post" id="user_info">
+ <form role="form" action="${domain!}user/login" method="post" id="user_info">
   <div class="form-group">
     <label for="name">用户名</label>
     <input type="text" class="form-control" name="uname" placeholder="请输入用户名">
