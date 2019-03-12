@@ -37,8 +37,8 @@ public class ShiroConfiguration {
 	        filterChainDefinitionMap.put("/user/login/*", "anon");//代表着前面的url路径，用后面指定的拦截器进行拦截
 	        filterChainDefinitionMap.put("/static/**", "anon");
 	        filterChainDefinitionMap.put("/templates/**", "anon");//
+	        filterChainDefinitionMap.put("/producer/*", "anon");//
 	        bean.setFilterChainDefinitionMap(filterChainDefinitionMap);//设置一个拦截器链
-	 
 	        return bean;
 	    }
 	    

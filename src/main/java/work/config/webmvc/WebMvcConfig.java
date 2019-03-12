@@ -47,7 +47,7 @@ public class WebMvcConfig implements org.springframework.web.servlet.config.anno
        return servletRegistrationBean;
     }
     /**
-     *初始化以及对rest数据类型支持
+     *初始化以及对rest api支持
      * @return
      */
     @Bean
