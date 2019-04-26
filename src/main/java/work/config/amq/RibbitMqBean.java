@@ -1,4 +1,4 @@
-package work.config.amq;
+/*package work.config.amq;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RibbitMqBean {
 	
-	/*交换机name*/
+	交换机name
 	@Value("${spring.EXCHANGE_NAME}")
 	private String EXCHANGE_NAME;
 	
@@ -49,3 +49,4 @@ public class RibbitMqBean {
     }
 	
 }
+*/

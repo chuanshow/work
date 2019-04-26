@@ -1,4 +1,4 @@
-package work.service.impl;
+/*package work.service.impl;
 
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,5 +21,6 @@ public class TopicDealImpl implements TopicDealService {
         System.out.println("Sender : " + msg);
         this.rabbitTemplate.convertAndSend(advice.EXCHANGE_NAME(),"", msg);
 	}
-
+a
 }
+*/

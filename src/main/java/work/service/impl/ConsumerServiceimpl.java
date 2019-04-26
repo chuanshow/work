@@ -1,4 +1,4 @@
-package work.service.impl;
+/*package work.service.impl;
 
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -17,3 +17,4 @@ public class ConsumerServiceimpl implements ConsumersService{
 	}
 
 }
+*/
