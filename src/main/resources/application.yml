@@ -1,9 +1,11 @@
 salt: work
 domain: hocalhost:8090/
+server:
+  port: 8090
 application: 
-   name: myservice
-   port: 8090
-   domain: localhost:8090/
+     name: myservice
+     port: 8090
+     domain: localhost:8090/
 spring: 
    cloud: 
       consul:

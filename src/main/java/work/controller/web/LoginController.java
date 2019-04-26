@@ -34,7 +34,7 @@ public class LoginController {
 	            model.setViewName("/index");
 	            return model;
 			  }else{
-				  model.setViewName("/user/index");
+				  model.setViewName("/user/loginpage");
 		            return model; 
 			  }
 	        } catch (Exception e) {
