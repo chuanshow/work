@@ -16,6 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class MySwagger {
 	 @Bean
 	    public Docket createRestfulApi() {//api文档实例
+		 //http://127.0.0.1:8099/swagger-ui.html
 	        return new Docket(DocumentationType.SWAGGER_2)//文档类型：DocumentationType.SWAGGER_2
 	                .apiInfo(apiInfo())//api信息
 	                .select()//构建api选择器

@@ -1,0 +1,52 @@
+salt: work
+domain: hocalhost:8090/
+application: 
+   name: myservice
+   port: 8090
+   domain: localhost:8090/
+spring: 
+   cloud: 
+      consul:
+        host: 127.0.0.1
+        port: 8500
+        discovery:
+         register: true
+         hostname: 127.0.0.1
+         port: 8099
+         serviceName: myservice
+         healthCheckPath: /actuator/health
+         healthCheckInterval: 15s
+         instanceId: ${application.name}
+   devtools: 
+        restart:
+              enabled: true
+              additional-paths: src/main/java/work 
+              spring.devtools.restart.exclude: WEB-INF/**
+   view: 
+        prefix: /templates/
+        suffix: ./ftl
+   datasource: 
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/data_center?useUnicode=true&characterEncoding=UTF-8&connectTimeout=60000&socketTimeout=60000&autoReconnect=true&autoReconnectForPools=true&failOverReadOnly=false&useSSL=false
+        username: root
+        passsword: 123456
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+        maxWait: 6000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 50000
+        validationQuery: SELECT 1 FROM DUAL
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20
+        filters: stat,wall,log4j
+        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+   EXCHANGE_NAME: ex_log
+mybatis: 
+    mapper-locations: classpath:mapper/*.xml
+    type-aliases-package: work.entity.po
+ 
+        

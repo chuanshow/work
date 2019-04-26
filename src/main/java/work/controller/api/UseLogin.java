@@ -51,12 +51,17 @@ public class UseLogin {
 	 public User checkUser(String userid){
 			 return uSerives.findUser(userid);
 		}
+	 @ApiImplicitParams({
+	        @ApiImplicitParam(paramType = "header", name = "Token", value = "token", dataType = "String", required = true,defaultValue = "user")})
+	 @ApiOperation(value = "测试")
+	 @ApiResponses(value = { @ApiResponse(code = 401, message = "请求未通过认证.", response = LoginController.class) })
 	 @RequiresGuest
-	 @RequestMapping(value="/test")
+	 @RequestMapping(value="/test",method=RequestMethod.GET)
 	 public String test(){
 		 return "yes";
 	 }
-	 @RequestMapping(value="/consulservice")
+	 @ApiOperation(value = "测试获取注册中心的服务")
+	 @RequestMapping(value="/consulservice",method=RequestMethod.GET)
 		public List<String> getService(String url){
 		String client = temp.getForObject(service.GetRegisterService().getUri().toString()+"/open/test",String.class);
 		System.err.println(client);
