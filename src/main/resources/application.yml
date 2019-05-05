@@ -1,24 +1,24 @@
 salt: work
-domain: hocalhost:8090/
+domain: localhost:8090/
 server:
   port: 8090
+  name: workservice
 application: 
-     name: myservice
-     port: 8090
-     domain: localhost:8090/
+     name: ${server.name}
+     port: ${server.port}
+     domain: ${domain}
 spring: 
    cloud: 
       consul:
-        host: 127.0.0.1
-        port: 8500
-        discovery:
-         register: true
-         hostname: 127.0.0.1
-         port: 8099
-         serviceName: myservice
-         healthCheckPath: /actuator/health
-         healthCheckInterval: 15s
-         instanceId: ${application.name}
+         host: 127.0.0.1
+         port: 8500
+         discovery:
+           register: true
+           hostname: 127.0.0.1
+           serviceName: myservice
+           healthCheckPath: /actuator/health
+           healthCheckInterval: 15s
+           instanceId: workservice-8099
    devtools: 
         restart:
               enabled: true
