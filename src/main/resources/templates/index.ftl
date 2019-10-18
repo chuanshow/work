@@ -1,10 +1,8 @@
-<script type="text/javascript" src="${domain!}easyui/jquery.min.js"></script>   
-<link  href="${domain!}css/bootstrap.min.css" rel="stylesheet"></script>
-<script type="text/javascript" src="${domain!}js/bootstrap.min.js"></script>
-<#-- 
-<div class="jumbotron text-center" style="margin-bottom:0">
-</div>
-  -->
+<script type="text/javascript" src="/easyui/jquery.min.js"></script>   
+<link  href="/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/toastr/toastr.scss" rel="stylesheet" />
+<script src="/toastr/toastr.js"></script>
+
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
     <div class="navbar-header">
@@ -29,7 +27,19 @@
                     <li><a href="#">另一个分离的链接</a></li>
                 </ul>
             </li>
+            <li class="dropdown" >
+            	<a href="" onClick="quit()">退出</a>
+              </li>
         </ul>
-    </div>vv
     </div>
+    </div>
+     <script type="text/javascript">
+      toastr.options.positionClass = 'toast-bottom-right';
+	      function quit(){
+	      	var url ="/api/user/exist"
+	      	$.post(url, {
+			},function(data){
+				  toastr.success('${msg!}');
+			})
+      </script>
 </nav>

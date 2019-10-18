@@ -21,7 +21,7 @@ import work.service.UserService;
  *
  */
 @RestController
-public class LoginController {
+public class LoginController extends BaseWeb{
 	@Autowired 
 	private UserService uSerives;
 	
@@ -45,11 +45,15 @@ public class LoginController {
 	}
 	 @RequestMapping(value={"/user/login"})
 	 public ModelAndView login(HttpServletRequest request,String upassword,String uname){
-		 ModelAndView model =new ModelAndView();
-		 UsernamePasswordToken token = new UsernamePasswordToken(uname, upassword);
-	        Subject subject = SecurityUtils.getSubject();
+		    Subject subject = SecurityUtils.getSubject();
+		    ModelAndView model =new ModelAndView();
+		    if(subject.isAuthenticated()){
+		 		  model.setViewName("/index");
+		          return model;
+		 	}
+		 	UsernamePasswordToken token = new UsernamePasswordToken(uname, upassword);
 	        try {
-	            subject.login(token);//登陆成功的话，放到session中
+	        	subject.login(token);//登陆成功的话，放到session中
 	            model.setViewName("/index");
 	            model.addObject("msg","登录成功");
 	            return model;

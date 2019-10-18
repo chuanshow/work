@@ -61,7 +61,7 @@ public class ShiroConfiguration {
 	    }
 	    //自定义的Realm
 	    @Bean("authRealm")
-	    public AuthRealm authRealm( HashedCredentialsMatcher  matcher) {
+	    public AuthRealm authRealm( CredentialMatcher  matcher) {
 	        AuthRealm authRealm = new AuthRealm();
 	        //这边可以选择是否将认证的缓存到内存中，现在有了这句代码就将认证信息缓存的内存中了
 	        authRealm.setCacheManager(new MemoryConstrainedCacheManager());

@@ -4,6 +4,9 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.stereotype.Service;
 
 import com.orbitz.consul.AgentClient;
@@ -15,7 +18,10 @@ import com.orbitz.consul.model.health.ServiceHealth;
 
 @Service
 public class ConsulService {
-	 /**
+	
+	@Autowired
+	private LoadBalancerClient loadBalancerClient;
+	/**
 	     * 注册服务
      * 并对服务进行健康检查
 	      * servicename唯一
@@ -34,11 +40,6 @@ public class ConsulService {
 	         } catch (MalformedURLException e) {
 	            e.printStackTrace();
 	         }
-	 //        try {
-	 //            agentClient.pass(serviceId);//健康检查
-	 //        } catch (NotRegisteredException e) {
-	//            e.printStackTrace();
-	 //        }
 	    }
 	     
 	     /**
@@ -83,5 +84,12 @@ public class ConsulService {
 	         StatusClient statusClient = Consul.builder().build().statusClient();
 	         return statusClient.getLeader();
      }
-	     
+	     /**
+	      * 随机获取一个服务
+	      * @return
+	      */
+	     public ServiceInstance findoneservice(){
+	    	ServiceInstance service = loadBalancerClient.choose("myservice");
+	    	return service;
+	     }
 }

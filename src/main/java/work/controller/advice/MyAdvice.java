@@ -1,6 +1,7 @@
 package work.controller.advice;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 /**
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
  *	全局常量设置
  */
 @ControllerAdvice
+@ConfigurationProperties
 public class MyAdvice {
 	/*系统url*/
 	@Value("${domain}")

@@ -2,8 +2,11 @@ package work.controller.api;
 
 import java.util.List;
 
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresGuest;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +20,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import work.config.definition.UserInfo;
 import work.consul.register.interfance.RegistryService;
+import work.controller.web.BaseWeb;
 import work.controller.web.LoginController;
 import work.entity.po.User;
 import work.service.UserService;
@@ -28,7 +32,7 @@ import work.service.UserService;
 @RestController()
 @RequestMapping("/api")
 @Api(value="用户接口",tags={"login"})//接口简要标注，对中文的支持不太好
-public class UseLogin {
+public class UseLogin extends BaseWeb{
 	
 	@Autowired 
 	private UserService uSerives;
@@ -64,8 +68,13 @@ public class UseLogin {
 	 @RequestMapping(value="/consulservice",method=RequestMethod.GET)
 		public List<String> getService(String url){
 		String client = temp.getForObject(service.GetRegisterService().getUri().toString()+"/open/test",String.class);
-		System.err.println(client);
 		return null;
 		}
+	 @PostMapping("api/user/exist")
+	 public void exist(){
+		 Subject subject = SecurityUtils.getSubject();
+		 subject.logout();
+		 run_success("退出成功!");
+	 }
 	 
 }
