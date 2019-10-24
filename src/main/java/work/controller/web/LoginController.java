@@ -6,6 +6,7 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -87,5 +88,9 @@ public class LoginController extends BaseWeb{
 	 @RequestMapping(value="/user/regist")
 	 public ModelAndView toRegister(){
 		 return new ModelAndView("/user/regist");
+	 }
+	 @GetMapping("/user/login/check")
+	 public String totest(String name){
+		 return name+"togo";
 	 }
 }

@@ -10,20 +10,22 @@ application:
 spring: 
    cloud: 
       consul:
-         enabled: false
          host: 127.0.0.1
          port: 8500
          discovery:
            register: true
            hostname: 127.0.0.1
            serviceName: myservice
-           healthCheckPath: /actuator/health
+           healthCheckPath: /api/check
            healthCheckInterval: 15s
-           instanceId: workservice-8099
+           instanceId: workservice
+         tags: 
+          - 服务提供者
+          - 测试服务-
    devtools: 
         restart:
               enabled: true
-              additional-paths: src/main/java/work 
+              additional-paths: src/main/java 
               spring.devtools.restart.exclude: WEB-INF/**
    view: 
         prefix: /templates/

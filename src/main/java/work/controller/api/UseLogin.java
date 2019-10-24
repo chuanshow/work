@@ -61,6 +61,11 @@ public class UseLogin extends BaseWeb{
 	 @ApiResponses(value = { @ApiResponse(code = 401, message = "请求未通过认证.", response = LoginController.class) })
 	 @RequiresGuest
 	 @RequestMapping(value="/test",method=RequestMethod.GET)
+	 public String test(String name){
+		 return name+"yes";
+	 }
+	 @RequiresGuest
+	 @RequestMapping(value="/check",method=RequestMethod.GET)
 	 public String test(){
 		 return "yes";
 	 }
